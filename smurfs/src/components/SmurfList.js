@@ -44,8 +44,8 @@ const SmurfList = (props) => {
           <Grid direction="row" justify="space-around" align="center" container spacing={3}>
           {props.smurfsOnProps && props.smurfsOnProps.map(item => {
               return(
-                <Grid item xs>
-                  <div key={item.id}>
+                <Grid item xs key={item.id}>
+                  <div>
                       
     <Card className={classes.root}>
       <CardContent>
