@@ -37,7 +37,7 @@ const SmurfList = (props) => {
     }, [])
 
   return (
-      <div>
+      <div style={{display: "flex", justifyContent: "space-around", marginTop: "4%"}}>
           {props.smurfsOnProps && props.smurfsOnProps.map(item => {
               return(
                   <div key={item.id}>

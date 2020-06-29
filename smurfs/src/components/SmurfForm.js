@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import Card from '@material-ui/core/Card';
 
+import { postSmurfs } from '../state/actions/smurfActions'
 
 const SmurfForm = (props) => {
 
@@ -19,6 +20,7 @@ const inputChange = (e) => {
 
 const onSubmit = (e) => {
     e.preventDefault();
+    props.postSmurfs(formState)
     setFormState({
         name: '',
         age: '',
@@ -27,7 +29,7 @@ const onSubmit = (e) => {
 }
 
 return(
-    <div>
+    <div style={{display: "flex", justifyContent: "center", alignItems: "center", marginTop: "8%"}}>
         <Card style={{ width: "20%", padding: "1%"}}>
             <h4>Add New Smurf</h4>
         <form onSubmit={onSubmit} style={{ display: 'flex', flexDirection: "column", justify: "center"}}>
@@ -79,4 +81,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, {})(SmurfForm);
+export default connect(mapStateToProps, {postSmurfs})(SmurfForm);

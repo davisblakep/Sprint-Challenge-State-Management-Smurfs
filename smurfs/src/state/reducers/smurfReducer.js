@@ -18,6 +18,12 @@ export const smurfReducer = (state = initialState, action) => {
                 isFetching: false,
                 error: '',
             }
+        case "FETCH_SMURFS":
+        return{
+            ...state,
+            isFetching: false,
+            error: '',
+        }
         default: 
             return state;
     }
