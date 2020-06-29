@@ -11,6 +11,7 @@ class App extends Component {
       <div className="background-image">
         <NavAppBar />
         <div className="App">
+        
         <SmurfList />
         <SmurfForm />
         </div>

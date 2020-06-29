@@ -18,9 +18,10 @@ export const smurfReducer = (state = initialState, action) => {
                 isFetching: false,
                 error: '',
             }
-        case "FETCH_SMURFS":
+        case "POST_SMURFS":
         return{
             ...state,
+            smurf: action.payload,
             isFetching: false,
             error: '',
         }

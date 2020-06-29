@@ -28,7 +28,7 @@ export const postSmurfs = (newSmurf) => {
             )
             .then(res => {
                 console.log("Axios Reponse from POST", res)
-                dispatch({ type: 'POST_SMURFS'})
+                dispatch({ type: 'POST_SMURFS', payload: res.data})
             })
             .catch(err => {console.log('Axios error from POST', err)})
     }

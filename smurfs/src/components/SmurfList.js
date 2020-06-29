@@ -6,6 +6,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid'
 
 import { fetchSmurfs } from '../state/actions/smurfActions';
 
@@ -36,11 +37,16 @@ const SmurfList = (props) => {
         props.fetchSmurfs()
     }, [])
 
+    // display: "flex", justifyContent: "space-around", 
+
   return (
-      <div style={{display: "flex", justifyContent: "space-around", marginTop: "4%"}}>
+      <div style={{flexGrow: 1, marginTop: "6%"}}>
+          <Grid direction="row" justify="space-around" align="center" container spacing={3}>
           {props.smurfsOnProps && props.smurfsOnProps.map(item => {
               return(
+                <Grid item xs>
                   <div key={item.id}>
+                      
     <Card className={classes.root}>
       <CardContent>
         <Typography className={classes.title} color="textSecondary" gutterBottom>
@@ -60,9 +66,12 @@ const SmurfList = (props) => {
         <Button size="small">Delete</Button>
       </CardActions>
     </Card>
+    
     </div>
+    </Grid>
     )
 })}
+</Grid>
     </div>
   );
 }
