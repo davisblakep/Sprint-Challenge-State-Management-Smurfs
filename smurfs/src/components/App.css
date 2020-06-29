@@ -1,3 +1,15 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
 .App {
   text-align: center;
+}
+
+.background-image {
+  background-image: url('https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
