@@ -21,7 +21,7 @@ const inputChange = (e) => {
 const onSubmit = (e) => {
     e.preventDefault();
     props.postSmurfs(formState);
-    props.fetchSmurfs();
+    // props.fetchSmurfs();
     setFormState({
         name: '',
         age: '',
